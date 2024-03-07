@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  font-size: 18px;
+}
+body {
+  background-color: #050816;
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: calc(80rem + 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  display: inline-block;
+}
+li {
+  list-style-type: none;
+}
+
+.main-bg {
+  background-image: url('../background.png');
+}
+.burger {
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.burger-menu {
+  background: #000000;
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
+}
+
+.section-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-subtitle {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.section-description {
+  font-size: 17px;
+}
+

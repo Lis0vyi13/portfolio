@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lenovo IdeaPad 3 14ADA05  Laptop
+* source:	https://sketchfab.com/3d-models/lenovo-ideapad-3-14ada05-laptop-09f40895928c4529a463d9bb4e5b3e55
+* author:	ilyagum (https://sketchfab.com/igrogar21)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lenovo IdeaPad 3 14ADA05  Laptop" (https://sketchfab.com/3d-models/lenovo-ideapad-3-14ada05-laptop-09f40895928c4529a463d9bb4e5b3e55) by ilyagum (https://sketchfab.com/igrogar21) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
