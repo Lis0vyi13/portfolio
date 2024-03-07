@@ -32,9 +32,6 @@ li {
   list-style-type: none;
 }
 
-.main-bg {
-  background-image: url('../background.png');
-}
 .burger {
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }

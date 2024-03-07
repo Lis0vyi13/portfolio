@@ -5,7 +5,7 @@ import About from './components/About';
 function App() {
   return (
     <Router>
-      <div className='relative main-bg bg-no-repeat bg-cover m-auto bg-center w-full h-screen'>
+      <div className='relative bg-["../background.png"] bg-no-repeat bg-cover m-auto bg-center w-full h-screen'>
         <Navbar />
         <main>
           <Hero />
