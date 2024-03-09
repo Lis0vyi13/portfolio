@@ -31,7 +31,11 @@ a {
 li {
   list-style-type: none;
 }
-
+.main-bg {
+  background: url('../background.png') no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
 .burger {
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
@@ -51,18 +55,13 @@ li {
   );
 }
 
-.section-title {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.green-pink-gradient {
+  background: '#00cea8';
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
-.section-subtitle {
-  font-size: 60px;
-  font-weight: 900;
-}
-
-.section-description {
-  font-size: 17px;
+.stack-card-bg {
+  background-color: rgb(21, 16, 48);
 }
 

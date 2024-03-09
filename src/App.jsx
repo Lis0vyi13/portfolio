@@ -5,10 +5,12 @@ import About from './components/About';
 function App() {
   return (
     <Router>
-      <div className='relative bg-["../background.png"] bg-no-repeat bg-cover m-auto bg-center w-full h-screen'>
+      <div className='relative m-auto bg-center'>
         <Navbar />
         <main>
-          <Hero />
+          <div className='main-bg'>
+            <Hero />
+          </div>
           <About />
         </main>
       </div>

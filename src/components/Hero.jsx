@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import LaptopCanvas from './canvas/Laptop';
-
+import { HeroText } from '../constants';
 const Hero = () => {
   return (
     <div className='min-h-[800px] mt-[-180px] sm:mt-[-155px]'>
@@ -20,15 +20,12 @@ const Hero = () => {
                 </span>
               </h1>
               <h3 className='font-medium text-[16px] xxs:mt-2 xs:mt-0 xxs:text-[17.5px] xs:text-[19px] sm:text-[21px] md:text-[23px] lg:text-[26px] md:max-w-[700px] xl:max-w-[580px] max-w-[550px]'>
-                I&apos;m frontend developer specializing in creating captivating
-                user interfaces and dynamic web applications. Passionate about
-                blending creativity with functionality to deliver seamless
-                digital experiences
+                {HeroText.description}
               </h3>
             </div>
           </div>
         </div>
-        <div className='absolute left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[375px] xs:bottom-[230px] md:bottom-[100px] xl:bottom-[385px] z-10 rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'>
+        <div className='absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[375px] xs:bottom-[210px] md:bottom-[100px] xl:bottom-[385px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'>
           <motion.div
             animate={{
               y: [0, 24, 0],
