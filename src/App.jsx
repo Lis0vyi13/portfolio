@@ -2,6 +2,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Stack from './components/Stack';
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,7 @@ function App() {
             <Hero />
           </div>
           <About />
+          <Stack />
         </main>
       </div>
     </Router>

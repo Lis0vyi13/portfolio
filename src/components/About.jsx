@@ -1,45 +1,38 @@
-import { useState, useEffect } from 'react';
-import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
+
+import SectionWrapper from '../hoc/SectionWrapper';
 
 import Title from '../ui/Title';
 import Subtitle from '../ui/Subtitle';
 import Description from '../ui/Description';
 
-import Card from './Card';
+import { AboutText } from '../constants';
 
-import { AboutText, StackCards } from '../constants';
+import lisovyi from '../assets/lisovyi.jpg';
 
 const About = () => {
-  const [cardList, setCardList] = useState([]);
-
-  useEffect(() => {
-    const cards = getCards();
-    setCardList(cards);
-  }, []);
-
-  const getCards = () => {
-    return StackCards.map((card) => {
-      const { key, ...data } = card;
-      return (
-        <Tilt key={key}>
-          <Card {...data} />
-        </Tilt>
-      );
-    });
-  };
   return (
     <motion.section className='relative mb-[100px] z-10 mt-[-180px] pt-[200px] xs:mt-[-10px] xs:pt-[150px] sm:mt-[20px] md:mt-[220px] md:pt-[90px] xl:mt-[-160px] xl:pt-[190px]'>
       <div className='container'>
-        <Title text={AboutText.title} />
-        <Subtitle text={AboutText.subtitle} />
-        <Description text={AboutText.description} />
-        <section className='grid grid-cols-4 gap-10 px-1 mt-6'>
-          {cardList}
-        </section>
+        <div className='flex lgXl:flex-row flex-col-reverse content-center items-center gap-7 lgXl:px-[100px]'>
+          <div>
+            <Title text={AboutText.title} />
+            <Subtitle text={AboutText.subtitle} />
+            <Description text={AboutText.description} />
+          </div>
+          <div>
+            <div className='green-pink-gradient p-[2px] text-center rounded-[30px] shadow-card w-full xs:w-[450px] h-full'>
+              <div className='stack-card-bg rounded-[30px] p-1 min-h-[280px] flex justify-evenly items-center flex-col'>
+                <img className='rounded-[30px]' src={lisovyi} alt='lisovyi' />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.section>
   );
 };
 
-export default About;
+const WrappedAbout = SectionWrapper(About, 'about');
+
+export default WrappedAbout;

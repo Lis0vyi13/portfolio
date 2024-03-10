@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-
+import { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { navLinks } from '../constants';
-
 import logo from '/logo-violet.png';
 
 const Burger = ({ list }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevState) => !prevState);
   };
 
   return (
@@ -51,39 +49,48 @@ const Burger = ({ list }) => {
 };
 
 const Navbar = () => {
-  const [navList, setNavList] = useState([]);
+  const [isActive, setIsActive] = useState('');
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const newList = getNavList();
-    setNavList(newList);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getNavList = () => {
+  const navList = useMemo(() => {
     return navLinks.map((link) => (
       <li
         key={link.key}
         className='navbar__link transition-all hover:text-white'
+        onClick={() => setIsActive(link.title)}
       >
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? 'text-white' : 'text-secondary'
-          }
-          to={link.url}
+        <a
+          className={isActive === link.title ? 'text-white' : 'text-secondary'}
+          href={link.url}
         >
           {link.title}
-        </NavLink>
+        </a>
       </li>
     ));
-  };
+  }, [isActive]);
 
   return (
-    <header className='navbar sticky top-0 z-50 bg-transparent'>
+    <header
+      className={`navbar sticky top-0 z-50 ${
+        scrolled ? 'bg-main' : 'bg-transparent'
+      } `}
+    >
       <div className='container'>
         <nav className='navbar__content py-3 flex justify-between gap-[40px] items-center'>
           <div className='navbar__logo'>
             <Link
               className='logo inline-flex items-center gap-2 sm:w-[333px]'
               to='/'
+              onClick={() => window.scrollTo(0, 0)}
             >
               <img width='60' src={logo} alt='logo' />
               <div className='logo-text transition-all flex capitalize font-bold'>

@@ -1,7 +1,7 @@
 export const navLinks = [
-  { key: 1, title: 'About', url: 'google.com' },
-  { key: 2, title: 'About2', url: 'facebook.com' },
-  { key: 3, title: 'About3', url: 'gmail.com' },
+  { key: 1, title: 'About', url: '#about' },
+  { key: 2, title: 'Stack', url: '#stack' },
+  { key: 3, title: 'About3', url: '#about3' },
 ];
 
 export const HeroText = {
@@ -13,7 +13,7 @@ export const AboutText = {
   title: 'Introduction',
   subtitle: 'About me',
   description:
-    "I'm a beginner web developer. I want to share with you my passion and desire to become a successful development professional. My expertise encompasses JavaScript and the React framework, and I believe this is a great starting point for my growth in this area.",
+    "Hey, my name is Olexandr, and I'm a 20 years old Frontend Developer based in Poltava. I'm excited to share my passion for development and my drive to excel in this field. With a focus on JavaScript and the React framework, I'm confident that I bring a strong foundation for growth. I see myself in your company because I'm not just looking for a job - I'm seeking an opportunity to grow, develop, and make a real difference in the world of development. I'm ready to join your team and move forward together towards new heights of success.",
   stack: 'Tech Stack',
 };
 

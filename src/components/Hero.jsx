@@ -25,7 +25,10 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className='absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[375px] xs:bottom-[210px] md:bottom-[100px] xl:bottom-[385px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'>
+        <a
+          href='#about'
+          className='absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[375px] xs:bottom-[210px] md:bottom-[100px] xl:bottom-[385px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'
+        >
           <motion.div
             animate={{
               y: [0, 24, 0],
@@ -37,7 +40,7 @@ const Hero = () => {
             }}
             className='w-3 h-3 mt-[8px] rounded-full bg-secondary'
           />
-        </div>
+        </a>
 
         {LaptopCanvas()}
       </div>

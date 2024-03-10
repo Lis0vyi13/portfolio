@@ -31,7 +31,7 @@ const LaptopModel = ({
       }
       position={
         isXsView
-          ? [0, -0.55, 0]
+          ? [0, -0.7, 0]
           : isSmView
           ? [0, -1.55, 0]
           : isMdView
