@@ -1,7 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { navLinks } from '../constants';
+
+import { motion } from 'framer-motion';
+
 import logo from '/logo-violet.png';
+import { fadeIn } from '../animations/motion';
 
 const Burger = ({ list }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,7 +83,10 @@ const Navbar = () => {
   }, [isActive]);
 
   return (
-    <header
+    <motion.header
+      variants={fadeIn('down', '', 0.2, 0.3)}
+      initial='hidden'
+      whileInView='show'
       className={`navbar sticky top-0 z-50 ${
         scrolled ? 'bg-main' : 'bg-transparent'
       } `}
@@ -106,7 +113,7 @@ const Navbar = () => {
           <Burger list={navList} />
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

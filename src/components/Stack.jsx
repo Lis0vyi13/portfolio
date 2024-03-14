@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Tilt } from 'react-tilt';
 
+import { motion } from 'framer-motion';
 import SectionWrapper from '../hoc/SectionWrapper';
 
 import Title from '../ui/Title';
@@ -8,6 +9,7 @@ import Subtitle from '../ui/Subtitle';
 import Card from './Card';
 
 import { StackCards } from '../constants';
+import { textAnim } from '../animations/motion';
 
 const Stack = () => {
   const [cardList, setCardList] = useState([]);
@@ -22,7 +24,7 @@ const Stack = () => {
       const { key, ...data } = card;
       return (
         <Tilt key={key}>
-          <Card {...data} />
+          <Card {...data} i={key} />
         </Tilt>
       );
     });
@@ -31,10 +33,14 @@ const Stack = () => {
   return (
     <section className='stack mt-[25px] mb-10'>
       <div className='container'>
-        <div className='text-center'>
+        <motion.div
+          variants={textAnim()}
+          viewport={{ once: true, amount: 0.25 }}
+          className='text-center'
+        >
           <Title text={'WHAT DO I WORK WITH'} />
           <Subtitle text={'Tech stack'} />
-        </div>
+        </motion.div>
         <section className='grid grid-cols-1 xs:grid-cols-2 gap-4 md:grid-cols-3 lgXl:grid-cols-4 md:gap-7 lgXl:gap-10 px-1 mt-6'>
           {cardList}
         </section>

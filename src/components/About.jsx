@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { textAnim, fadeIn } from '../animations/motion';
 
 import SectionWrapper from '../hoc/SectionWrapper';
 
@@ -12,24 +13,35 @@ import lisovyi from '../assets/lisovyi.jpg';
 
 const About = () => {
   return (
-    <motion.section className='relative mb-[100px] z-10 mt-[-180px] pt-[200px] xs:mt-[-10px] xs:pt-[150px] sm:mt-[20px] md:mt-[220px] md:pt-[90px] xl:mt-[-160px] xl:pt-[190px]'>
+    <section className='relative mb-[100px] z-10 mt-[-180px] pt-[200px] xs:mt-[-10px] xs:pt-[150px] sm:mt-[20px] md:mt-[220px] md:pt-[90px] xl:mt-[-160px] xl:pt-[190px]'>
       <div className='container'>
         <div className='flex lgXl:flex-row flex-col-reverse content-center items-center gap-7 lgXl:px-[100px]'>
-          <div>
+          <motion.div
+            variants={textAnim()}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.25 }}
+          >
             <Title text={AboutText.title} />
             <Subtitle text={AboutText.subtitle} />
-            <Description text={AboutText.description} />
-          </div>
+            <motion.div variants={fadeIn('', '', 0.1, 1)}>
+              <Description text={AboutText.description} />
+            </motion.div>
+          </motion.div>
           <div>
-            <div className='green-pink-gradient p-[2px] text-center rounded-[30px] shadow-card w-full xs:w-[450px] h-full'>
+            <motion.div
+              variants={fadeIn('up', '', 0.1, 0.5)}
+              viewport={{ once: true, amount: 0.25 }}
+              className='green-pink-gradient p-[2px] text-center rounded-[30px] shadow-card w-full xs:w-[450px] h-full'
+            >
               <div className='stack-card-bg rounded-[30px] p-1 min-h-[280px] flex justify-evenly items-center flex-col'>
                 <img className='rounded-[30px]' src={lisovyi} alt='lisovyi' />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
