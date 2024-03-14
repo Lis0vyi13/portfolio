@@ -9,7 +9,7 @@ import Subtitle from '../ui/Subtitle';
 import Card from './Card';
 
 import { StackCards } from '../constants';
-import { textAnim } from '../animations/motion';
+import { fadeIn } from '../animations/motion';
 
 const Stack = () => {
   const [cardList, setCardList] = useState([]);
@@ -34,7 +34,7 @@ const Stack = () => {
     <section className='stack mt-[25px] mb-10'>
       <div className='container'>
         <motion.div
-          variants={textAnim()}
+          variants={fadeIn('up', '', 0.05, 0.25)}
           viewport={{ once: true, amount: 0.25 }}
           className='text-center'
         >

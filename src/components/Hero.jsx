@@ -22,7 +22,7 @@ const Hero = () => {
               />
             </div>
             <motion.div
-              variants={fadeIn('right', '', 0.3, 0.3)}
+              variants={fadeIn('right', '', 0.05, 0.25)}
               initial='hidden'
               whileInView='show'
               viewport={{ once: true, amount: 0.25 }}
@@ -58,7 +58,7 @@ const Hero = () => {
         </a>
 
         <motion.div
-          variants={fadeIn('', '', 1, 1)}
+          variants={fadeIn('', '', 0.2, 1)}
           initial='hidden'
           whileInView='show'
           viewport={{ once: true, amount: 0.25 }}

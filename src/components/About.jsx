@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { textAnim, fadeIn } from '../animations/motion';
+import { fadeIn } from '../animations/motion';
 
 import SectionWrapper from '../hoc/SectionWrapper';
 
@@ -17,20 +17,20 @@ const About = () => {
       <div className='container'>
         <div className='flex lgXl:flex-row flex-col-reverse content-center items-center gap-7 lgXl:px-[100px]'>
           <motion.div
-            variants={textAnim()}
+            variants={fadeIn('up', '', 0.05, 0.3)}
             initial='hidden'
             whileInView='show'
             viewport={{ once: true, amount: 0.25 }}
           >
             <Title text={AboutText.title} />
             <Subtitle text={AboutText.subtitle} />
-            <motion.div variants={fadeIn('', '', 0.1, 1)}>
+            <motion.div variants={fadeIn('', '', 0.05, 0.25)}>
               <Description text={AboutText.description} />
             </motion.div>
           </motion.div>
           <div>
             <motion.div
-              variants={fadeIn('up', '', 0.1, 0.5)}
+              variants={fadeIn('up', '', 0.05, 0.25)}
               viewport={{ once: true, amount: 0.25 }}
               className='green-pink-gradient p-[2px] text-center rounded-[30px] shadow-card w-full xs:w-[450px] h-full'
             >

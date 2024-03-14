@@ -83,6 +83,8 @@ const Laptop = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
   );
 };
 const LaptopCanvas = () => {
+  useGLTF.preload('./lenovo_ideapad/scene.gltf');
+
   const [is2xlView, set2xlView] = useState(false);
   const [isXlView, setXlView] = useState(false);
   const [isMdView, setMdView] = useState(false);
@@ -112,6 +114,7 @@ const LaptopCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
+      draggable='false'
       style={{ height: 1200, right: 0 }}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}

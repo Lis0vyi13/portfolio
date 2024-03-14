@@ -84,7 +84,7 @@ const Navbar = () => {
 
   return (
     <motion.header
-      variants={fadeIn('down', '', 0.2, 0.3)}
+      variants={fadeIn('down', '', 0.05, 0.25)}
       initial='hidden'
       whileInView='show'
       className={`navbar sticky top-0 z-50 ${
