@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Stack from './components/Stack';
+import Benefits from './components/Benefits';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </div>
           <About />
           <Stack />
+          <Benefits />
         </main>
       </div>
     </Router>

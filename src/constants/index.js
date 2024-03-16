@@ -1,7 +1,7 @@
 export const navLinks = [
   { key: 1, title: 'About', url: '#about' },
   { key: 2, title: 'Stack', url: '#stack' },
-  { key: 3, title: 'About3', url: '#about3' },
+  { key: 3, title: 'Benefits', url: '#benefits' },
 ];
 
 export const HeroText = {
@@ -30,4 +30,25 @@ export const StackCards = [
   { key: 6, url: 'https://skillicons.dev/icons?i=tailwind', text: 'Tailwind' },
   { key: 7, url: 'https://skillicons.dev/icons?i=react', text: 'React' },
   { key: 8, url: 'https://skillicons.dev/icons?i=redux', text: 'Redux' },
+];
+
+export const experiences = [
+  {
+    i: 1,
+    title: 'Passion-Driven Performance',
+    description:
+      'I approach each project with a genuine enthusiasm for my work, viewing it as an opportunity to channel my talents and energy. By investing myself fully in every task, I strive to create outcomes that are not only technically proficient but also meaningful and inspiring. This dedication to my craft ensures that I consistently deliver results that exceed expectations and resonate with stakeholders.',
+  },
+  {
+    i: 2,
+    title: 'Meticulous Attention to Detail',
+    description:
+      "One of my core strengths lies in my ability to pay meticulous attention to detail. Whether it's reviewing code line by line or ensuring the accuracy of project specifications, I prioritize precision and thoroughness in every aspect of my work. By maintaining a keen eye for detail, I can identify and rectify potential issues early in the process, ultimately contributing to the overall quality and success of the project.",
+  },
+  {
+    i: 3,
+    title: 'Continuous Learning and Adaptability',
+    description:
+      "I believe that the key to staying relevant and effective in today's ever-evolving landscape is through continuous learning and adaptability. I actively seek out opportunities to expand my knowledge and skills, whether it's by taking on new challenges or staying updated on emerging technologies. This willingness to embrace change and learn from experiences enables me to adapt quickly to shifting priorities and requirements, ultimately positioning me to make valuable contributions to the success of the team and the organization as a whole.",
+  },
 ];

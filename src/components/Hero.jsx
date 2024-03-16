@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
+import { fadeIn, heroLine } from '../animations/motion';
 
 import LaptopCanvas from './canvas/Laptop';
-import { HeroText } from '../constants';
 
-import { fadeIn, heroLine } from '../animations/motion';
+import { HeroText } from '../constants';
 
 const Hero = () => {
   return (
     <div className='min-h-[800px] mt-[-180px] sm:mt-[-155px]'>
       <div className='hero-content relative pt-[85px]'>
         <div className='container relative z-10'>
-          <div className='flex absolute top-[130px] sm:left-[30px] md:left-[50px] lg:left-[100px] gap-[30px]'>
+          <div className='flex overflow-hidden absolute top-[130px] sm:left-[30px] md:left-[50px] lg:left-[100px] gap-[30px]'>
             <div className='flex self-start flex-col justify-center items-center'>
               <div className='rounded-full w-[20px] h-[20px] bg-violet' />
               <motion.div
@@ -18,7 +18,7 @@ const Hero = () => {
                 initial='hidden'
                 whileInView='show'
                 viewport={{ once: true }}
-                className='h-[220px] xs:h-[240px] sm:h-[270px] md:h-[300px] lg:h-[380px] w-[5px] violet-gradient'
+                className='h-[220px] relative z-11 xs:h-[240px] sm:h-[270px] md:h-[300px] lg:h-[380px] w-[5px] violet-gradient'
               />
             </div>
             <motion.div
@@ -42,7 +42,7 @@ const Hero = () => {
         </div>
         <a
           href='#about'
-          className='absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[375px] xs:bottom-[210px] md:bottom-[100px] xl:bottom-[385px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'
+          className='absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-[510px] xs:bottom-[280px] md:bottom-[170px] xl:bottom-[385px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary'
         >
           <motion.div
             animate={{

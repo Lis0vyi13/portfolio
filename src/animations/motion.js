@@ -10,24 +10,6 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
   };
 };
 
-export const textAnim = (delay) => {
-  return {
-    hidden: {
-      y: -50,
-      opacity: 0,
-    },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        duration: 1.25,
-        delay: delay,
-      },
-    },
-  };
-};
-
 export const heroLine = () => {
   return {
     hidden: {
@@ -45,7 +27,7 @@ export const heroLine = () => {
 export const fadeIn = (direction, type, delay, duration) => {
   return {
     hidden: {
-      x: direction === 'left' ? 50 : direction === 'right' ? -50 : 0,
+      x: direction === 'left' ? 30 : direction === 'right' ? -30 : 0,
       y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
       opacity: 0,
     },

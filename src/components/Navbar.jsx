@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { navLinks } from '../constants';
 
 import { motion } from 'framer-motion';
+import { fadeIn } from '../animations/motion';
+
+import { navLinks } from '../constants';
 
 import logo from '/logo-violet.png';
-import { fadeIn } from '../animations/motion';
 
 const Burger = ({ list }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +59,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
