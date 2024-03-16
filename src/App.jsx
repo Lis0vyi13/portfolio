@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Stack from './components/Stack';
 import Benefits from './components/Benefits';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <About />
           <Stack />
           <Benefits />
+          <Projects />
         </main>
       </div>
     </Router>

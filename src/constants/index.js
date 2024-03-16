@@ -2,6 +2,8 @@ export const navLinks = [
   { key: 1, title: 'About', url: '#about' },
   { key: 2, title: 'Stack', url: '#stack' },
   { key: 3, title: 'Benefits', url: '#benefits' },
+  { key: 4, title: 'Projects', url: '#projects' },
+  { key: 5, title: 'Contact', url: '#contact' },
 ];
 
 export const HeroText = {
@@ -17,6 +19,10 @@ export const AboutText = {
   stack: 'Tech Stack',
 };
 
+export const StackText = {
+  title: 'What do i work with',
+  subtitle: 'Tech stack',
+};
 export const StackCards = [
   { key: 1, url: 'https://skillicons.dev/icons?i=html', text: 'HTML' },
   { key: 2, url: 'https://skillicons.dev/icons?i=css', text: 'CSS' },
@@ -31,6 +37,11 @@ export const StackCards = [
   { key: 7, url: 'https://skillicons.dev/icons?i=react', text: 'React' },
   { key: 8, url: 'https://skillicons.dev/icons?i=redux', text: 'Redux' },
 ];
+
+export const BenefitsText = {
+  title: 'Why should I be part of your team',
+  subtitle: 'Benefits',
+};
 
 export const experiences = [
   {
@@ -50,5 +61,39 @@ export const experiences = [
     title: 'Continuous Learning and Adaptability',
     description:
       "I believe that the key to staying relevant and effective in today's ever-evolving landscape is through continuous learning and adaptability. I actively seek out opportunities to expand my knowledge and skills, whether it's by taking on new challenges or staying updated on emerging technologies. This willingness to embrace change and learn from experiences enables me to adapt quickly to shifting priorities and requirements, ultimately positioning me to make valuable contributions to the success of the team and the organization as a whole.",
+  },
+];
+
+export const ProjectsText = {
+  title: 'My work',
+  subtitle: 'Projects',
+  description:
+    'Below are demonstrations of my expertise and proficiency. Each showcase provides a concise overview of the project, accompanied by access to its code repository and live demonstrations. These websites underscore my capacity to tackle intricate challenges, adeptly navigate diverse technologies, and efficiently oversee project initiatives.',
+};
+
+export const projects = [
+  {
+    key: 1,
+    title: 'Weather App',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
+    img: './weather-app.png',
+    url: 'https://github.com/Lis0vyi13/Weather-App',
+  },
+  {
+    key: 2,
+    title: 'Marvel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
+    img: './marvel.png',
+    url: 'https://github.com/Lis0vyi13/marvel',
+  },
+  {
+    key: 3,
+    title: 'GD Consulting',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
+    img: './gd-consulting.png',
+    url: 'https://github.com/Lis0vyi13/GD-Consulting',
   },
 ];

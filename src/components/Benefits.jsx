@@ -8,12 +8,11 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../animations/motion';
 
 import Title from '../ui/Title';
-
 import Subtitle from '../ui/Subtitle';
 
 import SectionWrapper from '../hoc/SectionWrapper';
 
-import { experiences } from '../constants';
+import { BenefitsText, experiences } from '../constants';
 
 const BenefitsCard = ({ title, description, i }) => {
   return (
@@ -40,7 +39,6 @@ const BenefitsCard = ({ title, description, i }) => {
     </VerticalTimelineElement>
   );
 };
-
 const BenefitsInitial = () => {
   return (
     <div className='container'>
@@ -51,8 +49,8 @@ const BenefitsInitial = () => {
         viewport={{ once: true, amount: 0.1 }}
         className='text-center'
       >
-        <Title text={'Why should I be part of your team'} />
-        <Subtitle text={'Benefits'} />
+        <Title text={BenefitsText.title} />
+        <Subtitle text={BenefitsText.subtitle} />
       </motion.div>
       <VerticalTimeline>
         {experiences.map((exp) => {
