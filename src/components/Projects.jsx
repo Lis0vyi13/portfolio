@@ -23,10 +23,6 @@ const ProjectCard = ({ title, description, img, url, i }) => {
             <div className='relative w-full h-[300px] md:h-[230px]'>
               <img
                 className={'w-full h-full bg-cover object-cover rounded-2xl'}
-                style={{
-                  backgroundPosition:
-                    title === 'Weather App' ? 'left center' : '',
-                }}
                 src={img}
                 alt={title}
               />

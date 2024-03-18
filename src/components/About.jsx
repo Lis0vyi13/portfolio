@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../animations/motion';
 
@@ -12,8 +13,19 @@ import { AboutText } from '../constants';
 import lisovyi from '../assets/lisovyi.jpg';
 
 const About = () => {
+  const about = useRef(null);
+
+  useEffect(() => {
+    const aboutParent = about.current.parentElement;
+    aboutParent.classList.add('mt-[-170px]');
+    aboutParent.classList.add('xs:mt-0');
+  }, []);
+
   return (
-    <section className='relative mb-[100px] xs:mt-[-10px] xs:pt-[150px] sm:mt-[20px] md:mt-[160px] md:pt-[90px] xl:mt-[-160px] xl:pt-[190px]'>
+    <section
+      ref={about}
+      className='relative mb-[100px] mt-[-50px] pt-[100px] xs:mt-[-10px] xs:pt-[150px] sm:mt-[20px] md:mt-[160px] md:pt-[90px] xl:mt-[-160px] xl:pt-[190px]'
+    >
       <div className='container'>
         <div className='flex lgXl:flex-row flex-col-reverse content-center items-center gap-7 lgXl:px-[100px]'>
           <motion.div

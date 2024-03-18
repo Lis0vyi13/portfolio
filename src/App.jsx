@@ -6,6 +6,7 @@ import About from './components/About';
 import Stack from './components/Stack';
 import Benefits from './components/Benefits';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Stack />
           <Benefits />
           <Projects />
+          <Contact />
         </main>
       </div>
     </Router>

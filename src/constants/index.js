@@ -97,3 +97,28 @@ export const projects = [
     url: 'https://github.com/Lis0vyi13/GD-Consulting',
   },
 ];
+
+export const ContactText = {
+  title: 'Get in touch',
+  subtitle: 'Contact',
+};
+
+export const ContactFormText = {
+  inputName: {
+    label: 'Your name',
+    name: 'name',
+    placeholder: 'What is your name?',
+  },
+  inputEmail: {
+    label: 'Your email',
+    name: 'email',
+    placeholder: 'What is your email?',
+    type: 'email',
+  },
+  textAreaMessage: {
+    label: 'Your message',
+    name: 'message',
+    placeholder: 'What do you want to say?',
+  },
+  submitButton: 'Send',
+};
