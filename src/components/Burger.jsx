@@ -10,7 +10,7 @@ const Burger = ({ list }) => {
   return (
     <div
       onClick={handleClick}
-      className='burger md:hidden block relative cursor-pointer p-2'
+      className='burger mdLg:hidden block relative cursor-pointer p-2'
     >
       <div className={`relative w-[20px] h-[20px] scale-x-[-1]`}>
         <span

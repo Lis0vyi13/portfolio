@@ -69,5 +69,7 @@ const ProjectsInitial = () => {
   );
 };
 
-const Projects = SectionWrapper(ProjectsInitial, 'projects', '75px');
+const Projects = SectionWrapper(ProjectsInitial, 'projects', {
+  marginTop: '75px',
+});
 export default Projects;

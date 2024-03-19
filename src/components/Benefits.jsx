@@ -61,5 +61,7 @@ const BenefitsInitial = () => {
   );
 };
 
-const Benefits = SectionWrapper(BenefitsInitial, 'benefits', '75px');
+const Benefits = SectionWrapper(BenefitsInitial, 'benefits', {
+  marginTop: '75px',
+});
 export default Benefits;

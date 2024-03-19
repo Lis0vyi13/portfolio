@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className='md:flex hidden navbar__links flex-wrap justify-end items-center gap-8'>
+          <ul className='mdLg:flex hidden navbar__links flex-wrap justify-end items-center gap-8'>
             {navList}
           </ul>
           <Burger list={navList} />
