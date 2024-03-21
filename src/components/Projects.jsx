@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../animations/motion';
 
 import { Tilt } from 'react-tilt';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Title from '../ui/Title';
 import Subtitle from '../ui/Subtitle';
@@ -21,14 +22,17 @@ const ProjectCard = ({ title, description, img, url, i }) => {
         <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
           <div className='card-bg rounded-[20px] p-4 min-h-[480px] flex flex-col'>
             <div className='relative w-full h-[300px] md:h-[230px]'>
-              <img
+              <LazyLoadImage
                 className={'w-full h-full bg-cover object-cover rounded-2xl'}
                 src={img}
+                height='100%'
+                width='100%'
                 alt={title}
               />
               <div className='absolute right-2 top-2'>
                 <img
                   width={35}
+                  height='auto'
                   src='https://skillicons.dev/icons?i=github'
                   alt=''
                 />

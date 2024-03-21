@@ -1,12 +1,13 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { lazy } from 'react';
+import { HashRouter as Router } from 'react-router-dom';
 
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Stack from './components/Stack';
-import Benefits from './components/Benefits';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+const Hero = lazy(() => import('./components/Hero'));
+const Navbar = lazy(() => import('./components/Navbar'));
+const About = lazy(() => import('./components/About'));
+const Stack = lazy(() => import('./components/Stack'));
+const Benefits = lazy(() => import('./components/Benefits'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (

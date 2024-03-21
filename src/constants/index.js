@@ -77,7 +77,7 @@ export const projects = [
     title: 'Weather App',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
-    img: './weather-app.png',
+    img: './weather-app.webp',
     url: 'https://github.com/Lis0vyi13/Weather-App',
   },
   {
@@ -85,7 +85,7 @@ export const projects = [
     title: 'Marvel',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
-    img: './marvel.png',
+    img: './marvel.webp',
     url: 'https://github.com/Lis0vyi13/marvel',
   },
   {
@@ -93,7 +93,7 @@ export const projects = [
     title: 'GD Consulting',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?',
-    img: './gd-consulting.png',
+    img: './gd-consulting.webp',
     url: 'https://github.com/Lis0vyi13/GD-Consulting',
   },
 ];
@@ -122,3 +122,11 @@ export const ContactFormText = {
   },
   submitButton: 'Send',
 };
+
+export const ContactIcons = [
+  {
+    name: 'telegram',
+    href: 'https://web.telegram.org/k/#@lisovyi13',
+    src: '/telegram.svg',
+  },
+];

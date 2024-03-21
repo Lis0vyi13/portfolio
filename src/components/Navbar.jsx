@@ -8,7 +8,7 @@ import Burger from './Burger';
 
 import { navLinks } from '../constants';
 
-import logo from '/logo-violet.png';
+import logo from '/logo-violet.webp';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState('');
@@ -19,8 +19,9 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () =>
+      window.removeEventListener('scroll', handleScroll, { passive: true });
   }, []);
 
   const navList = useMemo(() => {
@@ -54,10 +55,10 @@ const Navbar = () => {
           <div className='navbar__logo'>
             <Link
               className='logo inline-flex items-center gap-2 sm:w-[333px]'
-              to='/'
+              to='/portfolio/'
               onClick={() => window.scrollTo(0, 0)}
             >
-              <img width='60' src={logo} alt='logo' />
+              <img width={60} height='auto' src={logo} alt='logo' />
               <div className='logo-text transition-all flex capitalize font-bold'>
                 <h1>Lisovyi &nbsp;</h1>
                 <span className='sm:block hidden'>| Frontend Developer</span>

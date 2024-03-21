@@ -1,105 +1,54 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import useEmailSender from '../hooks/useEmailSender';
 
-import { SERVICE_KEY, TEMPLATE_KEY, USER_PUBLIC_KEY } from '../api/email';
+import { motion } from 'framer-motion';
+import { slideIn } from '../animations/motion';
 
 import SectionWrapper from '../hoc/SectionWrapper';
 
-import EarthCanvas from './canvas/Earth';
+import ContactForm from './ContactForm';
 import StarsCanvas from './canvas/Stars';
+import Modal from './Modal';
 
 import Title from '../ui/Title';
 import Subtitle from '../ui/Subtitle';
-import Input from '../ui/Input';
-import Textarea from '../ui/Textarea';
 
-import Modal from './Modal';
+import { ContactText, ContactIcons } from '../constants';
 
-import { ContactText, ContactFormText } from '../constants';
+const ContactSocialItem = ({ name, href, src }) => {
+  return (
+    <a href={href}>
+      <div className='flex justify-center items-center w-10 h-10 rounded-full bg-blue-600'>
+        <img width={20} height={20} src={src} alt={name} />
+      </div>
+    </a>
+  );
+};
 
 const ContactInitial = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const { isLoading, isSuccess, error, sendEmail } = useEmailSender();
 
-  const onChangeHandler = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
-  };
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    try {
-      emailjs
-        .send(
-          SERVICE_KEY,
-          TEMPLATE_KEY,
-          {
-            from_name: formData.name,
-            to_name: 'Olexandr',
-            from_email: formData.email,
-            to_email: 'lisovyy13@gmail.com',
-            message: formData.message,
-          },
-          USER_PUBLIC_KEY,
-        )
-        .then(() => {
-          setIsSuccess(true);
-        })
-        .then(
-          setTimeout(() => {
-            setIsSuccess(false);
-          }, 5000),
-        );
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
   return (
     <>
       <div className='container lg-container md:-mt-[55px] lgXl:mt-2'>
         <div className='flex flex-col-reverse lgXl:flex-row lgXl:gap-10'>
-          <div className='relative z-10 lg:flex-[0.4] bg-main-100 p-8 rounded-2xl sm:mt-[70px] lgXl:mt-0 xxs:mt-[20px]'>
+          <motion.div
+            variants={slideIn('left', 'tween', 0.2, 0.5)}
+            className='relative z-10 w-full bg-main-100 p-8 rounded-2xl sm:mt-[70px] lgXl:mt-0 xxs:mt-[20px]'
+          >
+            <div className='absolute right-5 top-5'>
+              {ContactIcons.map((icon) => {
+                return <ContactSocialItem key={icon.name} {...icon} />;
+              })}
+            </div>
             <Title text={ContactText.title} />
             <Subtitle text={ContactText.subtitle} />
-            <form
-              onSubmit={onSubmitHandler}
-              className='flex flex-col mt-5 gap-5'
-            >
-              <Input
-                {...ContactFormText.inputName}
-                value={formData.name}
-                onChange={onChangeHandler}
-              />
-              <Input
-                {...ContactFormText.inputEmail}
-                value={formData.email}
-                onChange={onChangeHandler}
-              />
-              <Textarea
-                {...ContactFormText.textAreaMessage}
-                value={formData.message}
-                onChange={onChangeHandler}
-              />
-              <button
-                type='submit'
-                className={`transition-all bg-tertiary hover:bg-indigo-950 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary `}
-              >
-                {isLoading ? 'Sending...' : ContactFormText.submitButton}
-              </button>
-            </form>
-          </div>
-          <div className='relative z-0 lgXl:flex-[0.6] lgXl:h-auto md:h-[550px] h-[350px]'>
-            {EarthCanvas()}
-          </div>
+            <ContactForm isLoading={isLoading} sendEmail={sendEmail} />
+          </motion.div>
         </div>
       </div>
       <Modal isActive={isSuccess} />
+      {error && <p>Error: {error.message}</p>}
+
       {StarsCanvas()}
     </>
   );

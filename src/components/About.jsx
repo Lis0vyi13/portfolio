@@ -10,7 +10,7 @@ import Description from '../ui/Description';
 
 import { AboutText } from '../constants';
 
-import lisovyi from '../assets/lisovyi.jpg';
+import lisovyi from '../assets/lisovyi.webp';
 
 const About = () => {
   const about = useRef(null);
@@ -47,7 +47,13 @@ const About = () => {
               className='green-pink-gradient p-[2px] text-center rounded-[30px] shadow-card w-full xs:w-[450px] h-full'
             >
               <div className='stack-card-bg rounded-[30px] p-1 min-h-[280px] flex justify-evenly items-center flex-col'>
-                <img className='rounded-[30px]' src={lisovyi} alt='lisovyi' />
+                <img
+                  className='rounded-[30px]'
+                  width='100%'
+                  height='100%'
+                  src={lisovyi}
+                  alt='lisovyi'
+                />
               </div>
             </motion.div>
           </div>

@@ -34,7 +34,7 @@ li {
   list-style-type: none;
 }
 .main-bg {
-  background: url('../background.png') no-repeat;
+  background: url('../background.webp') no-repeat;
   background-size: cover;
   height: 1000px;
 }

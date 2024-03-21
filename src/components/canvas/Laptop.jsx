@@ -1,17 +1,10 @@
 import { Suspense, useEffect, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../CanvasLoader';
 
-const LaptopModel = ({
-  is2xlView,
-  isXlView,
-  isMdView,
-  isSmView,
-  isXsView,
-  rotationZ,
-}) => {
+const LaptopModel = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
   const { scene } = useGLTF('./lenovo_ideapad/scene.gltf');
   return (
     <primitive
@@ -42,24 +35,18 @@ const LaptopModel = ({
       }
       rotation={
         isSmView
-          ? [0, -0.245 + rotationZ, -0.4]
+          ? [0, -0.245, -0.4]
           : isMdView
-          ? [0, -0.245 + rotationZ, -0.4]
+          ? [0, -0.245, -0.4]
           : isXlView
-          ? [0, -0.245 + rotationZ, -0.4]
-          : [-0.05, -0.7 + rotationZ, -0.3]
+          ? [0, -0.245, -0.4]
+          : [-0.05, -0.7, -0.3]
       }
     />
   );
 };
 
 const Laptop = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
-  const [time, setTime] = useState(0);
-
-  useFrame(({ clock }) => {
-    setTime(clock.getElapsedTime());
-  });
-  const rotationZ = Math.sin(time) * -0.05;
   return (
     <mesh>
       <hemisphereLight intensity={2.35} groundColor='black' />
@@ -77,7 +64,6 @@ const Laptop = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
         isMdView={isMdView}
         isSmView={isSmView}
         isXsView={isXsView}
-        rotationZ={rotationZ}
       />
     </mesh>
   );
