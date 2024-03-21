@@ -50,14 +50,7 @@ const Laptop = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
   return (
     <mesh>
       <hemisphereLight intensity={2.35} groundColor='black' />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.42}
-        penumbra={1}
-        intensity={1}
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1.3} />
+
       <LaptopModel
         is2xlView={is2xlView}
         isXlView={isXlView}
@@ -68,6 +61,7 @@ const Laptop = ({ is2xlView, isXlView, isMdView, isSmView, isXsView }) => {
     </mesh>
   );
 };
+
 const LaptopCanvas = () => {
   useGLTF.preload('./lenovo_ideapad/scene.gltf');
 

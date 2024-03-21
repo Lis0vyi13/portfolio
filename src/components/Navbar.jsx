@@ -32,7 +32,11 @@ const Navbar = () => {
         onClick={() => setIsActive(link.title)}
       >
         <a
-          className={isActive === link.title ? 'text-white' : 'text-secondary'}
+          className={
+            isActive === link.title
+              ? 'text-white block'
+              : 'text-secondary block'
+          }
           href={link.url}
         >
           {link.title}
