@@ -1,3 +1,5 @@
+import telegram from '/telegram.svg';
+
 export const navLinks = [
   { key: 1, title: 'About', url: '#about' },
   { key: 2, title: 'Stack', url: '#stack' },
@@ -127,6 +129,6 @@ export const ContactIcons = [
   {
     name: 'telegram',
     href: 'https://web.telegram.org/k/#@lisovyi13',
-    src: '/telegram.svg',
+    src: telegram,
   },
 ];

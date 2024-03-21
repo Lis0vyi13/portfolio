@@ -1,18 +1,20 @@
-import { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect, useMemo, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../animations/motion';
 
 import Burger from './Burger';
 
+import { Context } from '../context/context';
 import { navLinks } from '../constants';
 
 import logo from '/logo-violet.webp';
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState('');
+  const { isActive, setIsActive } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +27,11 @@ const Navbar = () => {
   }, []);
 
   const navList = useMemo(() => {
+    const onLinkHandler = (id) => {
+      setTimeout(() => {
+        navigate(id);
+      }, 0);
+    };
     return navLinks.map((link) => (
       <li
         key={link.key}
@@ -33,17 +40,18 @@ const Navbar = () => {
       >
         <a
           className={
-            isActive === link.title
+            isActive?.toLowerCase() === link.title.toLowerCase()
               ? 'text-white block'
               : 'text-secondary block'
           }
+          onClick={() => onLinkHandler(`/${link.title.toLowerCase()}`)}
           href={link.url}
         >
           {link.title}
         </a>
       </li>
     ));
-  }, [isActive]);
+  }, [isActive, setIsActive]);
 
   return (
     <motion.header
@@ -60,7 +68,10 @@ const Navbar = () => {
             <Link
               className='logo inline-flex items-center gap-2 sm:w-[333px]'
               to='/portfolio/'
-              onClick={() => window.scrollTo(0, 0)}
+              onClick={() => {
+                window.scrollTo(0, 0);
+                setIsActive('');
+              }}
             >
               <img width={60} height='auto' src={logo} alt='logo' />
               <div className='logo-text transition-all flex capitalize font-bold'>
