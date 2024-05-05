@@ -9,6 +9,7 @@ import Subtitle from "../ui/Subtitle";
 import Description from "../ui/Description";
 
 import SectionWrapper from "../hoc/SectionWrapper";
+
 import { ProjectsText, projects } from "../constants";
 
 const ProjectCard = ({ title, description, img, url, i, tags }) => {
@@ -16,7 +17,7 @@ const ProjectCard = ({ title, description, img, url, i, tags }) => {
     <a href={url}>
       <motion.div
         variants={fadeIn("", "", i * 0.2, 0.3)}
-        viewport={{ once: true, amount: 0.35 }}
+        viewport={{ once: true, amount: 0.15 }}
         className="w-full h-full rounded-[20px]"
       >
         <Tilt className="h-full" options={{ max: 45, scale: 1, speed: 450 }}>

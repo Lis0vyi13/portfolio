@@ -108,7 +108,7 @@ export const projects = [
     title: "Garden",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?",
-    img: "./garden.png",
+    img: "./garden.webp",
     url: "https://github.com/Lis0vyi13/garden",
     tags: [
       { name: "React", color: "#66dbfb" },

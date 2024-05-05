@@ -1,13 +1,12 @@
-import { lazy } from "react";
 import { HashRouter as Router } from "react-router-dom";
 
-const Hero = lazy(() => import("./components/Hero"));
-const Navbar = lazy(() => import("./components/Navbar"));
-const About = lazy(() => import("./components/About"));
-const Stack = lazy(() => import("./components/Stack"));
-const Benefits = lazy(() => import("./components/Benefits"));
-const Projects = lazy(() => import("./components/Projects"));
-const Contact = lazy(() => import("./components/Contact"));
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Stack from "./components/Stack";
+import Benefits from "./components/Benefits";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
       <div className="relative m-auto bg-center">
         <Navbar />
         <main>
-          <div className="main-bg">
+          <div className="main-bg h-[1000px]">
             <Hero />
           </div>
           <About />
