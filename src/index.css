@@ -34,7 +34,7 @@ li {
   list-style-type: none;
 }
 .main-bg {
-  background: url("../background.webp") no-repeat;
+  background: url("/images/background.webp") no-repeat;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
@@ -42,7 +42,7 @@ li {
 
 .contact-bg {
   position: relative;
-  background: url("/contact-bg.webp") no-repeat;
+  background: url("/images/contact-bg.webp") no-repeat;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;

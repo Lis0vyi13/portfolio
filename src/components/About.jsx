@@ -10,7 +10,7 @@ import Description from "../ui/Description";
 
 import { AboutText } from "../constants";
 
-import lisovyi from "/me.webp";
+import lisovyi from "/images/me.webp";
 
 const About = () => {
   const about = useRef(null);

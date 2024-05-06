@@ -9,7 +9,7 @@ import Burger from "./Burger";
 import { Context } from "../context/context";
 import { navLinks } from "../constants";
 
-import logo from "/logo-violet.webp";
+import logo from "/icons/logo-violet.webp";
 
 const Navbar = () => {
   const { isActive, setIsActive } = useContext(Context);

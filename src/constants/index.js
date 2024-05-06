@@ -1,4 +1,4 @@
-import telegram from "/telegram.svg";
+import telegram from "/icons/telegram.svg";
 
 export const navLinks = [
   { key: 1, title: "About", url: "#about" },
@@ -79,7 +79,7 @@ export const projects = [
     title: "Weather App",
     description:
       "Discover accurate global weather conditions and forecasts effortlessly with our innovative platform, powered by reliable weather APIs.",
-    img: "./weather-app.webp",
+    img: "./projects/weather-app.webp",
     url: "https://github.com/Lis0vyi13/Weather-App",
     tags: [
       { name: "Javascript", color: "#f0dc55" },
@@ -92,7 +92,7 @@ export const projects = [
     title: "Marvel",
     description:
       "A platform that allows users to explore the vast world of characters and comics using the Marvel API",
-    img: "./marvel.webp",
+    img: "./projects/marvel.webp",
     url: "https://github.com/Lis0vyi13/marvel",
     tags: [
       { name: "React", color: "#66dbfb" },
@@ -108,7 +108,7 @@ export const projects = [
     title: "Garden",
     description:
       "Explore a one-stop shop for all your gardening essentials, offering a curated selection of products tailored to elevate your gardening experience.",
-    img: "./garden.webp",
+    img: "./projects/garden.webp",
     url: "https://github.com/Lis0vyi13/garden",
     tags: [
       { name: "React", color: "#66dbfb" },
