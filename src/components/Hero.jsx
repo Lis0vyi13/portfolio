@@ -35,9 +35,9 @@ const Hero = () => {
                   Olexandr
                 </span>
               </h1>
-              <h3 className="font-medium text-[16px] xxs:mt-2 xs:mt-0 xxs:text-[17.5px] xs:text-[19px] sm:text-[21px] md:text-[23px] lg:text-[26px] md:max-w-[700px] xl:max-w-[580px] max-w-[550px]">
+              <h1 className="font-medium text-[16px] xxs:mt-2 xs:mt-0 xxs:text-[17.5px] xs:text-[19px] sm:text-[21px] md:text-[23px] lg:text-[26px] md:max-w-[700px] xl:max-w-[580px] max-w-[550px]">
                 {HeroText.description}
-              </h3>
+              </h1>
             </motion.div>
           </div>
           <motion.div
@@ -47,24 +47,30 @@ const Hero = () => {
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}
           >
-            <div className="pr-3 grid justify-center items-center xl:block">
+            <div className="pr-3 pt-[390px] xs:pt-[400px] xs+:pt-[380px] xsSm:pt-[350px] sm:pt-[390px] mdLg:pt-[350px] lg:pt-[200px] xl:pt-0 grid justify-center items-center xl:block">
               <div className="lg:mt-[200px] xl:mt-0 lg:mr-[-350px] xl:mr-[-540px] 2xl:mt-[-80px] pr-3">
                 <img
+                  width="100%"
+                  height="100%"
                   className="scale-[0.6] hidden xl:block relative z-0"
                   src={laptop_left}
+                  alt="laptop"
                 />
               </div>
               <img
-                className="min-w-[380px] ml-[10px] xs:ml-0 pt-[390px] xs:pt-[400px] self-center xs+:pt-[380px] xs+:min-w-[560px] xsSm:pt-[350px] sm:pt-[390px] sm:w-[560px] md:w-[600px] mdLg:w-[800px] mdLg:scale-[0.8] mdLg:pt-[350px] lg:scale-[0.9] lg:pt-[200px] block xl:hidden relative z-0"
+                width={380}
+                height={370}
+                className="min-w-[380px] ml-[10px] xs:ml-0 self-center xs+:min-w-[560px] sm:w-[560px] md:w-[600px] mdLg:w-[800px] mdLg:scale-[0.8] lg:scale-[0.9] block xl:hidden relative z-0"
                 src={laptop_center}
+                alt="laptop"
               />
             </div>
           </motion.div>
         </div>
       </div>
-      {/* поменять ноут на webp + поменять фон в контактах */}
       <a
         href="#about"
+        title="Move down"
         className="absolute z-20 left-1/2 flex justify-center items-start cursor-pointer -translate-x-1/2 bottom-0 sm:bottom-[40px] md:bottom-[30px] mdLg:bottom-[120px] xl:bottom-[150px] xl:mt-[-130px] 2xl:mt-[-170px] rounded-3xl w-[34px] h-[60px] border-[3px] border-secondary"
       >
         <motion.div

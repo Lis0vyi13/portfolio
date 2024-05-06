@@ -35,7 +35,7 @@ const ProjectCard = ({ title, description, img, url, i, tags }) => {
                   width={35}
                   height="auto"
                   src="https://skillicons.dev/icons?i=github"
-                  alt=""
+                  alt="github"
                 />
               </div>
             </div>

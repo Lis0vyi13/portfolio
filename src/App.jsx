@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="relative m-auto bg-center">
         <Navbar />
-        <main>
+        <main className="min-h-[100vh]">
           <div className="main-bg h-[1000px]">
             <Hero />
           </div>

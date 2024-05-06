@@ -78,7 +78,7 @@ export const projects = [
     key: 1,
     title: "Weather App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?",
+      "Discover accurate global weather conditions and forecasts effortlessly with our innovative platform, powered by reliable weather APIs.",
     img: "./weather-app.webp",
     url: "https://github.com/Lis0vyi13/Weather-App",
     tags: [
@@ -91,7 +91,7 @@ export const projects = [
     key: 2,
     title: "Marvel",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?",
+      "A platform that allows users to explore the vast world of characters and comics using the Marvel API",
     img: "./marvel.webp",
     url: "https://github.com/Lis0vyi13/marvel",
     tags: [
@@ -107,7 +107,7 @@ export const projects = [
     key: 3,
     title: "Garden",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, incidunt?",
+      "Explore a one-stop shop for all your gardening essentials, offering a curated selection of products tailored to elevate your gardening experience.",
     img: "./garden.webp",
     url: "https://github.com/Lis0vyi13/garden",
     tags: [

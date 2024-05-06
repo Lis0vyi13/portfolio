@@ -52,9 +52,9 @@ const About = () => {
                 <img
                   className="rounded-[30px] absolute"
                   width="100%"
-                  height="520"
+                  height={520}
                   src={lisovyi}
-                  alt="lisovyi"
+                  alt="Olexandr Lisovyi"
                 />
               </div>
             </motion.div>

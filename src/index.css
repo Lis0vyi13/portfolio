@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
   font-size: 18px;
@@ -16,6 +15,7 @@
 body {
   background-color: #050816;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 .container {
   position: relative;
