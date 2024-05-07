@@ -1,5 +1,14 @@
 import telegram from "/icons/telegram.svg";
 
+import html from "/icons/stack/html.svg";
+import css from "/icons/stack/css.svg";
+import js from "/icons/stack/js.svg";
+import scss from "/icons/stack/scss.svg";
+import bootstrap from "/icons/stack/bootstrap.svg";
+import tailwind from "/icons/stack/tailwind.svg";
+import react from "/icons/stack/react.svg";
+import redux from "/icons/stack/redux.svg";
+
 export const navLinks = [
   { key: 1, title: "About", url: "#about" },
   { key: 2, title: "Stack", url: "#stack" },
@@ -26,18 +35,18 @@ export const StackText = {
   subtitle: "Tech stack",
 };
 export const StackCards = [
-  { key: 1, url: "https://skillicons.dev/icons?i=html", text: "HTML" },
-  { key: 2, url: "https://skillicons.dev/icons?i=css", text: "CSS" },
-  { key: 3, url: "https://skillicons.dev/icons?i=js", text: "JavaScript" },
-  { key: 4, url: "https://skillicons.dev/icons?i=scss", text: "SCSS/SASS" },
+  { key: 1, url: html, text: "HTML" },
+  { key: 2, url: css, text: "CSS" },
+  { key: 3, url: js, text: "JavaScript" },
+  { key: 4, url: scss, text: "SCSS/SASS" },
   {
     key: 5,
-    url: "https://skillicons.dev/icons?i=bootstrap",
+    url: bootstrap,
     text: "Bootstrap",
   },
-  { key: 6, url: "https://skillicons.dev/icons?i=tailwind", text: "Tailwind" },
-  { key: 7, url: "https://skillicons.dev/icons?i=react", text: "React" },
-  { key: 8, url: "https://skillicons.dev/icons?i=redux", text: "Redux" },
+  { key: 6, url: tailwind, text: "Tailwind" },
+  { key: 7, url: react, text: "React" },
+  { key: 8, url: redux, text: "Redux" },
 ];
 
 export const BenefitsText = {
