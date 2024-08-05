@@ -84,35 +84,6 @@ export const ProjectsText = {
 
 export const projects = [
   {
-    key: 1,
-    title: "Weather App",
-    description:
-      "Discover accurate global weather conditions and forecasts effortlessly with our innovative platform, powered by reliable weather APIs.",
-    img: "./projects/weather-app.webp",
-    url: "https://github.com/Lis0vyi13/Weather-App",
-    tags: [
-      { name: "Javascript", color: "#f0dc55" },
-      { name: "OpenWeatherAPI", color: "#eb6e4b" },
-      { name: "Tailwind", color: "#38bdf8" },
-    ],
-  },
-  {
-    key: 2,
-    title: "Marvel",
-    description:
-      "A platform that allows users to explore the vast world of characters and comics using the Marvel API",
-    img: "./projects/marvel.webp",
-    url: "https://github.com/Lis0vyi13/marvel",
-    tags: [
-      { name: "React", color: "#66dbfb" },
-      { name: "MarvelAPI", color: "#ee242b" },
-      {
-        name: "SCSS",
-        color: "#d1699d",
-      },
-    ],
-  },
-  {
     key: 3,
     title: "Garden",
     description:
@@ -124,6 +95,38 @@ export const projects = [
       { name: "Redux", color: "#754cb9" },
       { name: "Tailwind", color: "#38bdf8" },
       { name: "Stripe", color: "#6860ff" },
+    ],
+  },
+  {
+    key: 2,
+    title: "Task Manager",
+    description:
+      "A task manager that streamlines your workflow with intuitive organization and real-time updates.",
+    img: "./projects/task_manager.webp",
+    url: "https://github.com/Lis0vyi13/task-manager",
+    tags: [
+      { name: "React", color: "#66dbfb" },
+      { name: "Redux", color: "#3498db" },
+      { name: "Node JS", color: "#8CC84B" },
+      { name: "Express", color: "gray" },
+      { name: "MongoDB", color: "#47A248" },
+      {
+        name: "SCSS modules",
+        color: "#d1699d",
+      },
+    ],
+  },
+  {
+    key: 3,
+    title: "Aquawheel",
+    description:
+      "Effective cleaning solutions for your home-reliable, fast, and safe. Say goodbye to dirt and bacteria, and hello to pure cleanliness and freshness!.",
+    img: "./projects/aquawheel.webp",
+    url: "https://github.com/Lis0vyi13/aquawheel",
+    tags: [
+      { name: "React", color: "#66dbfb" },
+      { name: "Redux", color: "#754cb9" },
+      { name: "Tailwind", color: "#38bdf8" },
     ],
   },
 ];
