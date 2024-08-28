@@ -8,6 +8,9 @@ import bootstrap from "/icons/stack/bootstrap.svg";
 import tailwind from "/icons/stack/tailwind.svg";
 import react from "/icons/stack/react.svg";
 import redux from "/icons/stack/redux.svg";
+import vite from "/icons/stack/vite.svg";
+import typescript from "/icons/stack/typescript.svg";
+import nodejs from "/icons/stack/nodejs.svg";
 
 export const navLinks = [
   { key: 1, title: "About", url: "#about" },
@@ -47,6 +50,9 @@ export const StackCards = [
   { key: 6, url: tailwind, text: "Tailwind" },
   { key: 7, url: react, text: "React" },
   { key: 8, url: redux, text: "Redux" },
+  { key: 9, url: vite, text: "Vite" },
+  { key: 10, url: typescript, text: "Typescript" },
+  { key: 11, url: nodejs, text: "Node JS" },
 ];
 
 export const BenefitsText = {
