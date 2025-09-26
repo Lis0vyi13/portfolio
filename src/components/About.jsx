@@ -54,7 +54,7 @@ const About = () => {
                   width="100%"
                   height={520}
                   src={lisovyi}
-                  alt="Olexandr Lisovyi"
+                  alt="Oleksandr Lisovyi"
                 />
               </div>
             </motion.div>
