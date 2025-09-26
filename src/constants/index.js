@@ -29,7 +29,7 @@ export const AboutText = {
   title: "Introduction",
   subtitle: "About me",
   description:
-    "Hey, my name is Olexandr, and I'm a 20 years old Frontend Developer based in Poltava. I'm excited to share my passion for development and my drive to excel in this field. With a focus on JavaScript and the React framework, I'm confident that I bring a strong foundation for growth. I see myself in your company because I'm not just looking for a job - I'm seeking an opportunity to grow, develop, and make a real difference in the world of development. I'm ready to join your team and move forward together towards new heights of success.",
+    "Hey, my name is Oleksandr, and I'm a 21 years old Frontend Developer based in Poltava. I'm excited to share my passion for development and my drive to excel in this field. With a focus on JavaScript and the React framework, I'm confident that I bring a strong foundation for growth. I see myself in your company because I'm not just looking for a job - I'm seeking an opportunity to grow, develop, and make a real difference in the world of development. I'm ready to join your team and move forward together towards new heights of success.",
   stack: "Tech Stack",
 };
 
