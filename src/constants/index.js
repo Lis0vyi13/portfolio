@@ -11,6 +11,7 @@ import redux from "/icons/stack/redux.svg";
 import vite from "/icons/stack/vite.svg";
 import typescript from "/icons/stack/typescript.svg";
 import nodejs from "/icons/stack/nodejs.svg";
+import nextjs from "/icons/stack/nextjs.svg";
 
 export const navLinks = [
   { key: 1, title: "About", url: "#about" },
@@ -53,6 +54,7 @@ export const StackCards = [
   { key: 9, url: vite, text: "Vite" },
   { key: 10, url: typescript, text: "Typescript" },
   { key: 11, url: nodejs, text: "Node JS" },
+  { key: 12, url: nextjs, text: "Next JS" },
 ];
 
 export const BenefitsText = {

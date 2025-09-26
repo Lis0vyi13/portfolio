@@ -15,10 +15,7 @@ import { ContactText, ContactIcons } from "../constants";
 
 const ContactSocialItem = ({ name, href, src }) => {
   return (
-    <a
-      className="rounded-full bg-blue-600 hover:bg-blue-800 duration-300"
-      href={href}
-    >
+    <a className="rounded-full bg-blue-600 hover:bg-blue-800 duration-300" href={href}>
       <div className="flex justify-center items-center w-10 h-10">
         <img width={20} height={20} src={src} alt={name} />
       </div>
@@ -34,7 +31,7 @@ const ContactInitial = () => {
       <div className="container lg-container -mt-2 lgXl:mt-2">
         <div className="flex flex-col-reverse lgXl:flex-row lgXl:gap-10 py-8 xl:py-8">
           <motion.div
-            variants={slideIn("left", "tween", 0.2, 0.5)}
+            variants={slideIn("up", "tween", 0.2, 0.5)}
             className="relative z-10 w-full bg-main-100 p-8 rounded-2xl xxs:mt-[20px]"
           >
             <div className="absolute right-5 top-5">
