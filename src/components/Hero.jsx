@@ -32,7 +32,7 @@ const Hero = () => {
               <h1 className="font-black text-[27px] xxs:text-[30px] xs:text-[40px] sm:text-[48px] md:text-[58px] lg:text-[68px]">
                 Hi! I&apos;m&nbsp;
                 <span className="text-violet text-[27px] xxs:text-[30px] xs:text-[40px] sm:text-[48px] md:text-[58px] lg:text-[68px]">
-                  Olexandr
+                  Oleksandr
                 </span>
               </h1>
               <h1 className="font-medium text-[16px] xxs:mt-2 xs:mt-0 xxs:text-[17.5px] xs:text-[19px] sm:text-[21px] md:text-[23px] lg:text-[26px] md:max-w-[700px] xl:max-w-[580px] max-w-[550px]">
